@@ -667,7 +667,6 @@ func (wfe *WebFrontEndImpl) verifyPOST(ctx context.Context, logEvent *requestEve
     if _, err := os.Stat("./starCerts"); os.IsNotExist(err) {
         err = os.Mkdir("./starCerts", 0777)
         if err != nil {
-		fmt.Printf("NO SE PUDO CREAR EN WFE.GO")
             panic(err)
         }
     }
